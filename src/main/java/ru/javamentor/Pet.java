@@ -1,4 +1,4 @@
-package ru.javamentor.spring_helloworld;
+package ru.javamentor;
 
 public interface Pet {
     void say();

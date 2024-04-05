@@ -1,6 +1,8 @@
 package ru.javamentor.spring_helloworld;
 
-public class DogWithState implements Pet{
+import ru.javamentor.Pet;
+
+public class DogWithState implements Pet {
     private String name;
     public DogWithState(){
         System.out.println("Создался бин DogWithState");

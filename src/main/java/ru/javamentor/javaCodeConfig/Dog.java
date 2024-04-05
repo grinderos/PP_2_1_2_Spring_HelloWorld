@@ -1,4 +1,4 @@
-package ru.javamentor.spring_helloworld;
+package ru.javamentor.javaCodeConfig;
 
 import org.springframework.stereotype.Component;
 import ru.javamentor.Pet;

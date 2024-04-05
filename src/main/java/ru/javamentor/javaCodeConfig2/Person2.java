@@ -1,45 +1,41 @@
-package ru.javamentor.spring_helloworld;
+package ru.javamentor.javaCodeConfig2;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import ru.javamentor.Pet;
 
-@Component("personBean")
-public class Person {
-    @Autowired
-    @Qualifier("dogBean")
+public class Person2 {
+
     private Pet pet;
     @Value("${person.surName}")
     private String surName;
     @Value("${person.age}")
     private int age;
 
-    public Person(){
-        System.out.println("Создался бин Персоны (конструктор по умолчанию)");
-    }
-//    @Autowired
-    public Person(Pet pet){
+//    public Person2(){
+//        System.out.println("Создался бин Персоны (конструктор по умолчанию)");
+//    }
+
+    public Person2(Pet pet) {
         System.out.println("Создался бин Персоны (конструктор с параметром Pet)");
         this.pet = pet;
     }
-    public void callYourPet(){
+
+    public void callYourPet() {
         System.out.println("Привет, мой домашний обитатель!");
         pet.say();
     }
-//    @Autowired
-    public void setPet(Pet pet){
+
+    public void setPet(Pet pet) {
         System.out.println("метод setPet из класса Person");
         this.pet = pet;
     }
 
-    public void setSurName(String surName){
+    public void setSurName(String surName) {
         System.out.println("Метод setSurName из класса Person");
         this.surName = surName;
     }
 
-    public void setAge(int age){
+    public void setAge(int age) {
         System.out.println("Метод setAge из класса Person");
         this.age = age;
     }

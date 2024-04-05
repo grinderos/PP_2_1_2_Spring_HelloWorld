@@ -2,25 +2,28 @@ package ru.javamentor.spring_helloworld;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.javamentor.Pet;
 
-@Component("personBean")
-public class Person {
-    @Autowired
-    @Qualifier("dogBean")
+@Component("person1Bean")
+public class Person1 {
+
+//    @Autowired
+//    @Qualifier("dogBean")
     private Pet pet;
-    @Value("${person.surName}")
+
+//    @Value("${person1.surName}")
     private String surName;
-    @Value("${person.age}")
+
+//    @Value("${person1.age}")
     private int age;
 
-    public Person(){
-        System.out.println("Создался бин Персоны (конструктор по умолчанию)");
-    }
-//    @Autowired
-    public Person(Pet pet){
+//    public Person1(){
+//        System.out.println("Создался бин Персоны (конструктор по умолчанию)");
+//    }
+
+    @Autowired
+    public Person1(@Qualifier("catBean") Pet pet){
         System.out.println("Создался бин Персоны (конструктор с параметром Pet)");
         this.pet = pet;
     }

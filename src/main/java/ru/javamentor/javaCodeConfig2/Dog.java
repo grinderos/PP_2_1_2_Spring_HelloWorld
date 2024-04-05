@@ -1,9 +1,8 @@
-package ru.javamentor.spring_helloworld;
+package ru.javamentor.javaCodeConfig2;
 
-import org.springframework.stereotype.Component;
 import ru.javamentor.Pet;
 
-@Component("dogBean")
+//@Component("dogBean")
 public class Dog implements Pet {
 //    @Autowired
     public Dog() {

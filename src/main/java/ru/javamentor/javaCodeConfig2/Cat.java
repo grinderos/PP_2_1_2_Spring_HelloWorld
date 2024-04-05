@@ -1,12 +1,10 @@
-package ru.javamentor.spring_helloworld;
+package ru.javamentor.javaCodeConfig2;
 
 import org.springframework.stereotype.Component;
 import ru.javamentor.Pet;
 
-@Component("catBean")
 public class Cat implements Pet {
 
-//    @Autowired
     public Cat(){
         System.out.println("Создался бин Кошки");
     }
